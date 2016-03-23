@@ -8,22 +8,22 @@ permissions: []
 rules: []
 commands:
 - name: list
-  version: 0.1.0
-  executable: "/usr/local/bin/miasm-list"
+  version: 0.1.1
+  executable: commands/miasma-list
   enforcing: false
   calling_convention: bound
   documentation: 'List Stacks: `miasma:list`'
   options: []
 - name: find
-  version: 0.1.0
-  executable: "/usr/local/bin/miasma-find"
+  version: 0.1.1
+  executable: commands/miasma-find
   enforcing: false
   calling_convention: bound
   documentation: 'Find Stacks by Name: `miasma:find <search string>`'
   options: []
 - name: describe
-  version: 0.1.0
-  executable: "/usr/local/bin/miasma-describe"
+  version: 0.1.1
+  executable: commands/miasma-describe
   enforcing: false
   calling_convention: bound
   documentation: 'Describe Stack: `miasma:describe <stack name>`'

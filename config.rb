@@ -1,4 +1,4 @@
-version = "0.1.0"
+version = "0.1.2"
 Configuration.new do
   bundle do
     name "miasma"
@@ -12,7 +12,7 @@ Configuration.new do
     -> {
       name "list"
       version version
-      executable "/usr/local/bin/miasm-list"
+      executable "commands/miasma-list"
       enforcing false
       calling_convention "bound"
       documentation "List Stacks: `miasma:list`"
@@ -21,7 +21,7 @@ Configuration.new do
     -> {
       name "find"
       version version
-      executable "/usr/local/bin/miasma-find"
+      executable "commands/miasma-find"
       enforcing false
       calling_convention "bound"
       documentation "Find Stacks by Name: `miasma:find <search string>`"
@@ -30,7 +30,7 @@ Configuration.new do
     -> {
       name "describe"
       version version
-      executable "/usr/local/bin/miasma-describe"
+      executable "commands/miasma-describe"
       enforcing false
       calling_convention "bound"
       documentation "Describe Stack: `miasma:describe <stack name>`"
