@@ -1,9 +1,9 @@
-version = "0.1.4"
+version = "0.1.5"
 Configuration.new do
   bundle do
     name "miasma"
     type "foreign"
-    install "install.sh"
+    install "bin/install.sh"
   end
   templates []
   permissions []
