@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "bin/install.sh",
+      "sha256": "07d45db09feec093239c60656260943f24918573c3025cba1ae367b05c47feef"
+    },
+    {
+      "path": "commands/miasma-describe",
+      "sha256": "bd4dc0d897bb7d025734c5708490ff940292d3a93780d6d30023d9c934116967"
+    },
+    {
+      "path": "commands/miasma-find",
+      "sha256": "dc2d35c7456dded8e4a27066f41d4b8acae30b9b21bc83e6d0a3f984d2a816d1"
+    },
+    {
+      "path": "commands/miasma-list",
+      "sha256": "e6f1ca80f04883a0ed6ca4f366ef948db46cce077d7af1b6dafd1f2925c578a6"
+    }
+  ]
+}
