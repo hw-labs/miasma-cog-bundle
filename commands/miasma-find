@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'miasma'
+
+cloud = Miasma.api(:type => :orchestration,
+                   :provider => :aws,
+                   :credentials => {
+                     :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+                     :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+                     :aws_region => ENV['AWS_REGION']
+                   })
+
+puts cloud.stacks.all.first.name
+
+stack = cloud.stacks.all.select { |stack| stack.name.include? ARGV[0] }
+
+puts stack.map(&:name)

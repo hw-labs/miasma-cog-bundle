@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    attribute_struct (0.3.4)
+      bogo (>= 0.1.31, < 0.3.0)
+    bogo (0.2.2)
+      hashie
+      multi_json
+    bogo-config (0.1.14)
+      attribute_struct
+      bogo (>= 0.1.4, < 1.0)
+      multi_json
+      multi_xml
+    hashie (3.4.3)
+    multi_json (1.11.2)
+    multi_xml (0.5.5)
+    rubyzip (1.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bogo-config
+  rubyzip
+
+BUNDLED WITH
+   1.12.0.rc

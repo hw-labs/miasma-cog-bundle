@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'miasma'
+
+cloud = Miasma.api(:type => :orchestration,
+                   :provider => :aws,
+                   :credentials => {
+                     :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+                     :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+                     :aws_region => ENV['AWS_REGION']
+                   })
+if cloud.stacks.all.map(&:name).include?(ARGV[0])
+  puts "Outputs for #{ARGV[0]}:"
+  puts cloud.stacks.get(ARGV[0]).outputs.map{ |o| "#{o.key}: #{o.value}" }
+else
+  puts "Stack Not Found"
+end
