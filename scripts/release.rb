@@ -7,14 +7,8 @@ require 'json'
 # Generate Config
 config = Bogo::Config.new('config.rb').to_hash
 
-if ARGV[0] == "json"
-  File.open("config.json", "w") do |f|
-    f.write(JSON.pretty_generate(config))
-  end
-else
-  File.open("config.yaml", "w") do |f|
+File.open("config.yaml", "w") do |f|
     f.write(config.to_yaml)
-  end
 end
 
 # Generate Manifest
