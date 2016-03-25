@@ -1,6 +1,14 @@
 #!/usr/bin/env ruby
 
-require "zip"
+require 'bogo-config'
+require 'zip'
+
+# Generate Config
+config = Bogo::Config.new('config.rb').to_hash
+
+File.open("config.yaml", "w") do |f|
+    f.write(config.to_yaml)
+end
 
 bundle_files = Dir[ 'bin/*', 'commands/*' ] + %w(manifest.json config.yaml)
 

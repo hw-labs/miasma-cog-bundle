@@ -1,15 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'bogo-config'
 require 'digest'
 require 'json'
-
-# Generate Config
-config = Bogo::Config.new('config.rb').to_hash
-
-File.open("config.yaml", "w") do |f|
-    f.write(config.to_yaml)
-end
 
 # Generate Manifest
 manifest = {
