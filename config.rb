@@ -8,7 +8,7 @@ Configuration.new do
   bundle do
     name "miasma"
     type "foreign"
-    install "bin/install.sh"
+    install "/usr/bin/touch miasma-cog.installed"
   end
   templates []
   permissions []
