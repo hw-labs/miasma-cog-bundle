@@ -1,4 +1,9 @@
-version = "0.1.5"
+version = "0.1.6"
+env_vars = {
+  :AWS_REGION => ENV['AWS_REGION'],
+  :AWS_ACCESS_KEY_ID => ENV['AWS_ACCESS_KEY_ID'],
+  :AWS_SECRET_ACCESS_KEY => ENV['AWS_SECRET_ACCESS_KEY']
+}
 Configuration.new do
   bundle do
     name "miasma"
@@ -12,6 +17,7 @@ Configuration.new do
     -> {
       name "list"
       version version
+      env_vars env_vars
       executable "commands/miasma-list"
       enforcing false
       calling_convention "bound"
@@ -21,6 +27,7 @@ Configuration.new do
     -> {
       name "find"
       version version
+      env_vars env_vars
       executable "commands/miasma-find"
       enforcing false
       calling_convention "bound"
@@ -30,6 +37,7 @@ Configuration.new do
     -> {
       name "describe"
       version version
+      env_vars env_vars
       executable "commands/miasma-describe"
       enforcing false
       calling_convention "bound"
