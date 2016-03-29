@@ -2,6 +2,8 @@
 
 require 'miasma'
 
+stack = ENV.fetch("COG_ARGV_0", ARGV[0])
+
 cloud = Miasma.api(:type => :orchestration,
                    :provider => :aws,
                    :credentials => {
@@ -9,9 +11,9 @@ cloud = Miasma.api(:type => :orchestration,
                      :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
                      :aws_region => ENV['AWS_REGION']
                    })
-if cloud.stacks.all.map(&:name).include?(ARGV[0])
-  puts "Outputs for #{ARGV[0]}:"
-  puts cloud.stacks.get(ARGV[0]).outputs.map{ |o| "#{o.key}: #{o.value}" }
+if cloud.stacks.all.map(&:name).include?(stack)
+  puts "Outputs for #{stack}:"
+  puts cloud.stacks.get(stack).outputs.map{ |o| "#{o.key}: #{o.value}" }
 else
   puts "Stack Not Found"
 end

@@ -2,6 +2,8 @@
 
 require 'miasma'
 
+search_string = ENV.fetch("COG_ARGV_0", ARGV[0])
+
 cloud = Miasma.api(:type => :orchestration,
                    :provider => :aws,
                    :credentials => {
@@ -12,6 +14,6 @@ cloud = Miasma.api(:type => :orchestration,
 
 puts cloud.stacks.all.first.name
 
-stack = cloud.stacks.all.select { |stack| stack.name.include? ARGV[0] }
+stack = cloud.stacks.all.select { |stack| stack.name.include? search_string }
 
 puts stack.map(&:name)
