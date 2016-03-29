@@ -12,20 +12,20 @@ Currently, these dependencies must be installed separately.
 * Clone the git repo as the operable/cog user
 * `cd` to the repo & run `bundle install`
 * Export the following Environment Variables:
-  ```
-  AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY
-  AWS_REGION
-  ```
-  These credentials need access to:
-  ```
-  "cloudformation:DescribeStacks",
-  "cloudformation:DescribeStackEvents",
-  "cloudformation:DescribeStackResource",
-  "cloudformation:DescribeStackResources",
-  "cloudformation:GetTemplate",
-  "cloudformation:List*"
-  ```
+    ```
+    AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY
+    AWS_REGION
+    ```
+    These credentials need access to:
+    ```
+    "cloudformation:DescribeStacks",
+    "cloudformation:DescribeStackEvents",
+    "cloudformation:DescribeStackResource",
+    "cloudformation:DescribeStackResources",
+    "cloudformation:GetTemplate",
+    "cloudformation:List*"
+    ```
   Amazon provides this via the `arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess` policy
 * run `bundle exec scripts/build.rb` to generate `miasma.cog`
 * `mv` or `cp` `miasma.cog` to the `relay/data/pending` directory
