@@ -1,4 +1,4 @@
-version = "0.1.6"
+version = "0.1.7"
 env_vars = {
   :AWS_REGION => ENV['AWS_REGION'],
   :AWS_ACCESS_KEY_ID => ENV['AWS_ACCESS_KEY_ID'],

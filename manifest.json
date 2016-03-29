@@ -6,11 +6,11 @@
     },
     {
       "path": "commands/miasma-describe",
-      "sha256": "bd4dc0d897bb7d025734c5708490ff940292d3a93780d6d30023d9c934116967"
+      "sha256": "8e334ed9dca0a64e8fe625a0535e433b92d8028396a4dd28f66bdfc9f5c6643e"
     },
     {
       "path": "commands/miasma-find",
-      "sha256": "dc2d35c7456dded8e4a27066f41d4b8acae30b9b21bc83e6d0a3f984d2a816d1"
+      "sha256": "8c8c53664b7ed9ca82973ea74b96c24de14428ed42061ea6f1061531ba3187d8"
     },
     {
       "path": "commands/miasma-list",
