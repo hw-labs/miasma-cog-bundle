@@ -6,15 +6,15 @@
     },
     {
       "path": "commands/miasma-describe",
-      "sha256": "8e334ed9dca0a64e8fe625a0535e433b92d8028396a4dd28f66bdfc9f5c6643e"
+      "sha256": "8bf06d9909ffda2dfa68885e1e9f39e1edc0dbb65fd6057143a39a197a2e3846"
     },
     {
       "path": "commands/miasma-find",
-      "sha256": "8c8c53664b7ed9ca82973ea74b96c24de14428ed42061ea6f1061531ba3187d8"
+      "sha256": "21f440e053aa18a04d3ed045589e1719550021ebc2162c835e52d13cd807c509"
     },
     {
       "path": "commands/miasma-list",
-      "sha256": "e6f1ca80f04883a0ed6ca4f366ef948db46cce077d7af1b6dafd1f2925c578a6"
+      "sha256": "1e65d9191acd03fe2d9fef4877745b15a5df2d4854d9e8f2a702c2cf8ffeccb7"
     }
   ]
 }
