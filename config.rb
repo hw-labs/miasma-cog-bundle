@@ -1,4 +1,4 @@
-version = "0.1.7"
+version = "0.2.0"
 env_vars = {
   :AWS_REGION => ENV['AWS_REGION'],
   :AWS_ACCESS_KEY_ID => ENV['AWS_ACCESS_KEY_ID'],
@@ -21,7 +21,7 @@ Configuration.new do
       executable "commands/miasma-list"
       enforcing false
       calling_convention "bound"
-      documentation "List Stacks: `miasma:list`"
+      documentation "List Stacks: `miasma:list <region>`"
       options []
     },
     -> {
@@ -31,7 +31,7 @@ Configuration.new do
       executable "commands/miasma-find"
       enforcing false
       calling_convention "bound"
-      documentation "Find Stacks by Name: `miasma:find <search string>`"
+      documentation "Find Stacks by Name: `miasma:find <search string> <region>`"
       options []
     },
     -> {
@@ -41,7 +41,7 @@ Configuration.new do
       executable "commands/miasma-describe"
       enforcing false
       calling_convention "bound"
-      documentation "Describe Stack: `miasma:describe <stack name>`"
+      documentation "Describe Stack: `miasma:describe <stack name> <region>`"
       options []
     }
   )

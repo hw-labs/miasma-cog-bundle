@@ -1,13 +1,14 @@
 #!/usr/bin/env ruby
 
 require 'miasma'
+region = ENV['COG_ARGV_0'] || ARGV[0] || ENV['AWS_REGION']
 
 cloud = Miasma.api(:type => :orchestration,
                    :provider => :aws,
                    :credentials => {
                      :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
                      :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
-                     :aws_region => ENV['AWS_REGION']
+                     :aws_region => region
                    })
 
 stacks = cloud.stacks.all.map { |stack| "#{stack.name}: #{stack.status}" }
